@@ -46,7 +46,7 @@
 :root {
   --primary-color: #222222;
   --secondary-color: #f5f5f5;
-  --text-color: #81848a;
+  --text-color: #222222;
   --accent-color: #ff9900;
   --white-color: #ffffff;
   --divider-color: #ebebeb;
@@ -81,8 +81,13 @@ body {
 p {
   line-height: 1.7em;
   margin-bottom: 1.6em;
-  font-weight: 300;
+  font-size: 18px;
+  font-weight: 600;
   font-family: "AxiformaLight";
+}
+
+li{
+  font-weight: 600;
 }
 
 h1,
@@ -107,6 +112,7 @@ img {
 
 a {
   text-decoration: none;
+  font-size: 18px;
 }
 
 a:hover {
@@ -2305,6 +2311,7 @@ margin: 0;
 .about-footer-content p {
   color: var(--primary-color);
   margin: 0;
+
 }
 
 .footer-social-links ul {
@@ -2375,6 +2382,8 @@ margin: 0;
 .footer-links ul li a {
   color: inherit;
   transition: all 0.3s ease-in-out;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .footer-links ul li:hover a {
@@ -2958,7 +2967,23 @@ margin: 0;
 }
 
 .our-faqs {
-  padding: 100px 0;
+  padding: 80px 0;
+  background: url("../images/faq-bg.png");
+  background-size: cover;
+  position: relative;
+  z-index: 1; 
+}
+
+.our-faqs::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  z-index: -1; 
+  background: var(--primary-color);
+  opacity: 0.9;
 }
 
 .our-faqs-images {
@@ -3066,7 +3091,7 @@ margin: 0;
 
 .our-faq-section .accordion-header .accordion-button.collapsed {
   background-color: transparent;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .our-faq-section .accordion-item .accordion-button::after,
@@ -3078,7 +3103,7 @@ margin: 0;
   top: 50%;
   transform: translateY(-50%);
   font-size: 16px;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   transition: all 0.3s ease-in-out;
 }
 
@@ -4725,6 +4750,12 @@ height: 145px;
 .md-desk{
   background: var(--divider-color);
 }
+.md-desk-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .md-desk-image img{
   border-radius: 0 100px 0 100px;
 }
@@ -4801,7 +4832,9 @@ height: 145px;
   width: calc(33.33% - 20px);
   color: var(--primary-color);
   text-transform: capitalize;
+  font-size: 18px;
   padding-left: 40px;
+  font-weight: 500;
 }
 .feature-ul ul li::before {
   content: "";
@@ -5111,7 +5144,7 @@ height: 145px;
   }
 
   .hero.hero-slider-layout .hero-slide {
-    padding: 100px 0 150px;
+    padding: 0px;
   }
 
   .hero.hero-slider-layout .hero-pagination {
@@ -5519,7 +5552,7 @@ height: 145px;
   }
 
   .page-header {
-    padding: 80px 0;
+    padding:  0;
   }
 
   .page-header-box h1 {
@@ -6153,7 +6186,7 @@ height: 145px;
 
   .about-image {
     max-width: 100%;
-    padding-top: 90px;
+    padding-top: 0px;
   }
 
  
