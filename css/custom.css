@@ -6220,6 +6220,7 @@ height: 145px;
   .about-img-2 img,
   .about-img-1 figure img {
     border-radius: 30px;
+    max-height: 200px;
   }
 
   .about-img-2 {
