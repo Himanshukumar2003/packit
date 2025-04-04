@@ -6221,6 +6221,7 @@ height: 145px;
   .about-img-1 figure img {
     border-radius: 30px;
     max-height: 200px;
+    width: 100%;
   }
 
   .about-img-2 {
