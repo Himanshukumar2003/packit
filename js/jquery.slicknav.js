@@ -549,6 +549,7 @@
             $this._menuToggle();
         }
     };
+  
 
     $.fn[mobileMenu] = function ( options ) {
         var args = arguments;
@@ -565,6 +566,8 @@
                     $.data(this, 'plugin_' + mobileMenu, new Plugin( this, options ));
                 }
             });
+
+            
 
         // If is a string and doesn't start with an underscore or 'init' function, treat this as a call to a public method.
         } else if (typeof options === 'string' && options[0] !== '_' && options !== 'init') {

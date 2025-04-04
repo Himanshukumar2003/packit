@@ -4826,7 +4826,10 @@ height: 145px;
   display: flex;
   gap: 20px 30px;
   flex-wrap: wrap;
+  
 }
+
+
 .feature-ul ul li {
   position: relative;
   width: calc(33.33% - 20px);
@@ -5039,12 +5042,36 @@ height: 145px;
 }
 
 @media only screen and (max-width: 991px) {
+
+.products, .komet{
+  padding: 50px 0;
+}
+
+.nav-item{
+  border-bottom: 1px solid white;
+}
+
+
+#menuToggle:checked + .menu-list {
+  visibility: visible;
+  opacity: 1;
+  transform: scaleY(1);
+  padding: 5px 0;
+}
+
+  .topbar-contact-info {
+    display: none;
+  }
+
+  .footer-copyright-text{
+    font-size: 15px;
+  }
   .btn-default span {
     padding: 12px 15px;
   }
 
   .topbar {
-    padding: 15px 0;
+    padding:  0;
   }
 
   .site-logo {
@@ -5077,6 +5104,7 @@ height: 145px;
 
   .navbar {
     padding: 15px 0;
+    background-color: white;
   }
 
   .main-header .navbar-brand {
@@ -5087,10 +5115,7 @@ height: 145px;
     max-width: 130px;
   }
 
-  .slicknav_nav li,
-  .slicknav_nav ul {
-    display: block;
-  }
+  
 
   .responsive-menu,
   .navbar-toggle {
@@ -5177,10 +5202,9 @@ height: 145px;
   }
 
   .about-image {
-    max-width: 80%;
     margin: 0 auto;
     margin-bottom: 30px;
-    padding-top: 120px;
+    padding-top: 0px;
   }
 
   .company-experience {
@@ -6136,7 +6160,7 @@ height: 145px;
 
 @media only screen and (max-width: 767px) {
   .topbar {
-    padding: 10px 0;
+    padding:0;
   }
 
   .topbar-contact-info ul {
@@ -6160,10 +6184,7 @@ height: 145px;
     width: calc(100% - 40px);
   }
 
-  .topbar-qoute-btn {
-    display: none;
-  }
-
+ 
   .section-row {
     margin-bottom: 30px;
   }
@@ -6814,4 +6835,71 @@ align-items: center;
 
 .feature, .specification, .attachment, .application{
 padding-top: 45px !important;
+}
+
+
+
+@media (max-width: 800px) {
+  .services-list-box .service-item {
+    width: calc(50% - 30px); /* 2 items per row */
+  }
+
+  .services-list-box .service-item:nth-child(2n):after {
+    display: none; /* Removes border after every 2nd item */
+  }
+}
+
+@media (max-width: 576px) {
+  .services-list-box {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .services-list-box .service-item {
+    width: calc(50% - 10px); /* Ensuring 2 items per row */
+  }
+
+  .service-item .icon-box {
+    margin-bottom: 15px;
+  }
+
+  .service-item .icon-box img {
+    max-width: 50px;
+  }
+
+  .service-body h3 {
+    font-size: 18px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+
+  
+  .feature-ul ul li{
+    width: 100%;
+
+  }
+  .feature-ul ul {
+    gap: 15px 20px;
+    flex-direction: column;
+  }
+
+  .specific-card{
+    padding: 15px;
+  }
+
+  .spec-name p {
+    margin-bottom: 0 !important;
+}
+}
+
+
+@media (max-width: 480px) {
+  .feature-ul ul {
+    gap: 10px;
+    width: 100%;
+
+  }
 }
