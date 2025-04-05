@@ -6233,6 +6233,7 @@ background-color: var(--accent-color);
     padding: 0;
   }
 
+  
   .topbar-contact-info ul {
     margin-right: 0px;
     padding-right: 0px;
@@ -6993,6 +6994,10 @@ background-color: var(--accent-color);
   .nav-item {
     display: block;
   }
+  .komet-content h2{
+    font-size: 32px;
+  }
+
 
   .submenu .menu-list {
     position: static;

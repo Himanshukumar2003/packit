@@ -3,12 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Responsive Dropdown Menu</title>
+  <title>Responsive Dropdown</title>
 
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      list-style: none;
     }
 
     .navbar {
@@ -16,15 +24,8 @@
       padding: 10px;
     }
 
-    .nav-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-    }
-
     .nav-item {
+      display: inline-block;
       position: relative;
     }
 
@@ -39,61 +40,26 @@
       background-color: #555;
     }
 
+    /* Submenu style */
     .menu-list {
       display: none;
       position: absolute;
       top: 100%;
       left: 0;
-      background-color: #444;
-      z-index: 1000;
-      min-width: 200px;
+      background: #444;
+      width: 200px;
     }
 
-    .menu-list ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .menu-list .nav-item .nav-link {
+    .menu-list li a {
       color: #fff;
       padding: 10px;
     }
 
-    .menu-list .nav-item .nav-link:hover {
-      background-color: #555;
-    }
-
-    /* Hover for large screens */
+    /* For smaller screens: toggle dropdown */
+   
+    /* For large screens: show submenu on hover */
     @media (min-width: 992px) {
       .submenu:hover .menu-list {
-        display: block;
-      }
-    }
-
-    /* Mobile styles */
-    @media (max-width: 991px) {
-      .nav-list {
-        flex-direction: column;
-      }
-
-      .menu-list {
-        position: static;
-        background-color: #222;
-        padding-left: 15px;
-      }
-
-      .submenu .nav-link::after {
-        content: " ▼";
-        font-size: 0.6rem;
-        margin-left: 5px;
-      }
-
-      .submenu .menu-list {
-        display: none;
-      }
-
-      .submenu.open .menu-list {
         display: block;
       }
     }
@@ -104,21 +70,8 @@
   <nav class="navbar">
     <ul class="nav-list">
       <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-
-      <li class="nav-item submenu">
-        <a class="nav-link" href="#" id="productsToggle">Products</a>
-        <div class="menu-list">
-          <ul>
-            <li class="nav-item"><a class="nav-link" href="komet-81.html">Komet 81</a></li>
-            <li class="nav-item"><a class="nav-link" href="indus-5000.html">Indus 5000</a></li>
-            <li class="nav-item"><a class="nav-link" href="duplex-packaging-systems.html">Duplex Packaging System</a></li>
-            <li class="nav-item"><a class="nav-link" href="gt-5s.html">GT-5S</a></li>
-            <li class="nav-item"><a class="nav-link" href="various-filler-systems.html">Various Filler Systems</a></li>
-            <li class="nav-item"><a class="nav-link" href="komet-sprint.html">Komet Sprint</a></li>
-            <li class="nav-item"><a class="nav-link" href="multi-head-weigher.html">Multi Head weigher</a></li>
-          </ul>
-        </div>
-      </li>
+      
+   
 
       <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
     </ul>
@@ -126,8 +79,9 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      var toggleLink = document.getElementById("productsToggle");
-      toggleLink.addEventListener("click", function (e) {
+      var dropdown = document.getElementById("productsDropdown");
+
+      dropdown.addEventListener("click", function (e) {
         if (window.innerWidth <= 991) {
           e.preventDefault();
           this.parentElement.classList.toggle("open");
