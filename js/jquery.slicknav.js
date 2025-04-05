@@ -592,4 +592,15 @@
     };
 }(jQuery, document, window));
 
+document.addEventListener("DOMContentLoaded", function () {
+    var dropdown = document.getElementById("productsDropdown");
+
+    dropdown.addEventListener("click", function (e) {
+      if (window.innerWidth <= 991) {
+        e.preventDefault();
+        this.parentElement.classList.toggle("open");
+        
+      }
+    });
+  });
 
