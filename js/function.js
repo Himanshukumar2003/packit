@@ -354,7 +354,7 @@
       prevEl: ".swiper-button-prev",
     },
     thumbs: {
-      swiper: swiper,
+      swiper: swiper2,
     },
   });
 
